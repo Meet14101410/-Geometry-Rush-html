@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Geometry Rush</title>
+  <style>
+    body{
+      margin:0;
+      overflow:hidden;
+      background:#111;
+    }
+    #player{
+      width:50px;
+      height:50px;
+      background:cyan;
+      position:absolute;
+      bottom:20px;
+      left:50px;
+    }
+    .obstacle{
+      width:30px;
+      height:60px;
+      background:red;
+      position:absolute;
+      bottom:20px;
+      right:-40px;
+      animation:move 2s linear infinite;
+    }
+    @keyframes move{
+      from{right:-40px;}
+      to{right:100%;}
+    }
+  </style>
+</head>
+<body>
+
+<div id="player"></div>
+<div class="obstacle"></div>
+
+<script>
+const player = document.getElementById("player");
+
+document.addEventListener("keydown", () => {
+  player.style.bottom = "120px";
+  setTimeout(() => {
+    player.style.bottom = "20px";
+  }, 400);
+});
+</script>
+
+</body>
+</html>
