@@ -1,0 +1,9 @@
+const player = document.getElementById("player");
+
+document.addEventListener("keydown", () => {
+  player.style.bottom = "120px";
+
+  setTimeout(() => {
+    player.style.bottom = "20px";
+  }, 400);
+});
